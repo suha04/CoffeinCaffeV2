@@ -29,6 +29,7 @@ nav
     width: 100%;
     box-shadow: 0px 1px 30px 5px;
     
+    
 }
 
 .navDiv
@@ -125,6 +126,7 @@ nav
 
 #udvozles
 {
+    animation: 3s fadeIn;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -134,12 +136,7 @@ nav
     width: 100%;
     text-align: center;
     color: var(--fontcolor);
-}
-
-#udvozles h2
-{
-    font-family: 'BackToBlack';
-    font-size: clamp(3rem, 2vw, 4rem);
+    
 }
 
 #udvozles h1
@@ -150,6 +147,7 @@ nav
 
 #udvozles span img
 {
+    
     width: clamp(20rem, 50vw, 40rem);
 }
 
