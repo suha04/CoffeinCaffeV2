@@ -55,7 +55,7 @@ nav
 
 #navList a
 {
-    font-size: clamp(.5rem, 1.5vw, 1rem);
+    font-size: clamp(.7rem, 1.5vw, 1rem);
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
