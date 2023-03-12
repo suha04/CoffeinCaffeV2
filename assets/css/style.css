@@ -40,7 +40,7 @@ nav
 
 #navImg
 {
-    width: 12rem;
+    width: 14rem;
     aspect-ratio: 970, 261;
 }
 
@@ -55,7 +55,7 @@ nav
 
 #navList a
 {
-    font-size: clamp(.7rem, 1.5vw, 1rem);
+    font-size: clamp(.6rem, 1.5vw, 1rem);
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
@@ -122,6 +122,7 @@ nav
     {
         display: block;
         transition: ease-in;
+        padding: 1rem 0 1rem 0;
     }
 
     #hamburger{
