@@ -50,7 +50,7 @@ nav
 {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: clamp(0.5rem, 1vw, 1rem);
     
 }
 
@@ -72,19 +72,20 @@ nav
 }
 
 
-#socials
+#sideNav
 {
     display: flex;
     gap: clamp(1rem, 2vw, 2rem);
+    padding: .5rem;
 }
 
-#socials a
+#sideNav a
 {
     color: var(--fontcolor);
     font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
-#socials a:hover
+#sideNav a:hover
 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -105,30 +106,61 @@ nav
     display: none;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.container
+{
+    height: 100vh;
 }
 
-.dropdown-content {
-    display: none;
+#fooldal
+{
+    width: 100%;
+    height: 100vh;
+    background-image:
+    url('../img/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#udvozles
+{
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    background-color: var(--coffered);
-    z-index: 1;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0px 10px 30px 1px;
-}
-
-.dropdown-content a {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
     color: var(--fontcolor);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: var(--coffedarkred);
-    border: none;
+#udvozles h2
+{
+    font-family: 'BackToBlack';
+    font-size: 4rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

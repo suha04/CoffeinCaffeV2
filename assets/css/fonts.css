@@ -22,3 +22,13 @@
     font-family: 'Amontesa';
     src: url('../fonts/Amontesa.ttf');
 }
+
+@font-face {
+    font-family: 'BeauRivage';
+    src: url('../fonts/BeauRivage.ttf');
+}
+
+@font-face {
+    font-family: 'BackToBlack';
+    src: url('../fonts/BackToBlack.ttf');
+}
