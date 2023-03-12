@@ -3,12 +3,14 @@
     --bgcolor: #202020;
     --fontcolor: white;
     --coffered: rgb(155, 0, 0);
+    --hovercolor: white;
 }
 
 *
 {
     margin: 0;
     padding: 0;
+   
 }
 
 body
@@ -38,7 +40,7 @@ nav
 
 #navImg
 {
-    width: 15rem;
+    width: 12rem;
     aspect-ratio: 970, 261;
 }
 
@@ -53,7 +55,7 @@ nav
 
 #navList a
 {
-    font-size: clamp(11px, 1.2vw, 20px);
+    font-size: clamp(.5rem, 1.5vw, 1rem);
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
@@ -62,22 +64,23 @@ nav
 #navList a:hover
 {
     color: var(--hovercolor);
-    border-block: 10px solid var(--hovercolor);
+    border-bottom: 2px solid var(--hovercolor);
     border-radius: 10px;
     transition: 200ms ease-in;
+    
 }
 
 
 #socials
 {
     display: flex;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 #socials a
 {
     color: var(--fontcolor);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 #socials a:hover
