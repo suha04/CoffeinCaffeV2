@@ -32,3 +32,13 @@
     font-family: 'BackToBlack';
     src: url('../fonts/BackToBlack.ttf');
 }
+
+@font-face {
+    font-family: 'RULES';
+    src: url('../fonts/RULES.ttf');
+}
+
+@font-face {
+    font-family: 'LemonTuesday';
+    src: url('../fonts/LemonTuesday.otf');
+}
