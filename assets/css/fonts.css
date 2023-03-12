@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'QueensLand';
+    src: url('../fonts/QueensLand.ttf');
+}
+
+@font-face {
+    font-family: 'AmericanCaptain';
+    src: url('../fonts/AmericanCaptain.ttf');
+}
+
+@font-face {
+    font-family: 'ModernPrestige';
+    src: url('../fonts/ModernPrestige.otf');
+}
+
+@font-face {
+    font-family: 'GlimmerOfLight';
+    src: url('../fonts/GlimmerOfLight.otf');
+}
+
+@font-face {
+    font-family: 'Amontesa';
+    src: url('../fonts/Amontesa.ttf');
+}
