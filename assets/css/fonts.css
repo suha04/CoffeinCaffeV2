@@ -42,3 +42,8 @@
     font-family: 'LemonTuesday';
     src: url('../fonts/LemonTuesday.otf');
 }
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../fonts/Alegreya.ttf');
+}

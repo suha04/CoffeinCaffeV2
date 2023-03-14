@@ -21,26 +21,21 @@ html
 
 body
 {
-    background-color: var(--bgcolor);
+    background-color: var(--fontcolor);
 }
 
 nav
 {
-    background-color: var(--coffered);
-    z-index: 99999;
     display: flex;
-    justify-content: space-evenly;
-    box-shadow: 0px 1px 30px 5px;
-}
-
-.fixed-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    transition: transform 0.3s ease-in-out;
-  }
-
+    background-color: var(--coffered);
+    z-index: 99999;
+    justify-content: space-evenly;
+    box-shadow: 0px 1px 30px 5px;
+}
 
 .navDiv
 {
@@ -67,12 +62,13 @@ nav
     display: flex;
     list-style: none;
     gap: clamp(0.5rem, 1vw, 1rem);
+    flex-direction: row;
     
 }
 
 #navList a
 {
-    font-size: clamp(.60rem, 1.5vw, 1rem);
+    font-size: clamp(1rem);
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
@@ -124,9 +120,10 @@ nav
 
 .arrow,
 .arrow:before {
-position: absolute;
+position: fixed;
 bottom: 10%;
 left: 50%;
+z-index: 2;
 
 
 
@@ -157,17 +154,32 @@ animation: arrow 2s infinite;
 
 .container
 {
-    height: 100vh;
-    width: 100%;
+    margin: 2rem;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+.flex
+{
+    display: flex;
+}
+
 #fooldal
 {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-image:
     url('../img/fooldal.jpg');
+}
+
+#rolunk
+{
+    background-image: url(../img/rolunk2.jpeg);
+    background-position: center;
 }
 
 #udvozles
@@ -202,38 +214,41 @@ animation: arrow 2s infinite;
     font-size: clamp(1rem, 5vw, 2rem);
 }
 
-#rolunk
-{
-    background-image: url('../img/rolunk.jpg');
-    background-position: center;
-}
 
 .szovegContainer
 {
-    background-color: green;
-    height: 100%;
-    width: 50%;
-    margin: auto;
+    width: 60rem;
+    
 }
 
 #bemutatkozas
 {
-    padding-top: clamp(2rem, 10vw, 6rem);
+    margin: clamp(0rem, 0vw, 2rem);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    min-height: 40vh;
+    height: max-content;
+    color: var(--fontcolor);
+    
 }
 
 #bemutatkozas h1
 {
+    margin-top: 8rem;
     display: block;
     text-align: center;
-    background-color: #d6249f;
+    background-color: var(--coffered);
     font-family: 'RULES';
-    font-size: clamp(2rem, 9vw, 5rem);
+    font-size: clamp(3rem, 9vw, 5rem);
 }
 
-
-
-
-
+#bemutatkozas p
+{
+    padding: clamp(1rem, 5vw, 2rem);
+    font-family: 'Alegreya';
+    font-size: clamp(1rem, 5vw, 2rem);
+    
+}
 
 
 
@@ -244,16 +259,20 @@ animation: arrow 2s infinite;
         flex-direction: column;   
     }
 
-    .hide-nav {
-        transform: translateY(-100%);
-      }
-
     nav.active
     {
-        background: linear-gradient(180deg, var(--coffered) 50%, rgba(130, 0, 0, 0.5)80%);
+        background: linear-gradient(180deg, var(--coffered) 10%, rgba(130, 0, 0, 0.5)40%);
         backdrop-filter: blur(2px);
         
     }
+
+    #navList
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
     .navDiv:nth-child(3),
     .navDiv:nth-child(4)
     {
@@ -344,10 +363,14 @@ animation: arrow 2s infinite;
         transition: 200ms ease-out;
     }
 
-
     .szovegContainer
     {
         width: 100%;
+    }
+
+    #bemutatkozas h1
+    {
+        
     }
 }
 
