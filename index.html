@@ -12,7 +12,7 @@
     <title>Coffein Caffe | Kávézó és Szendvicsbár</title>
 </head>
 <body>
-    <nav>
+    <nav class="fixed-nav">
         <div class="navDiv">
             <img id="navImg" src="assets/img/title.png" draggable="false" alt="Coffein Caffe">
         </div>
@@ -25,7 +25,7 @@
     
         <div class="navDiv">
             <ul id="navList" draggable="false">
-                <li>
+                <li class="navActive">
                     <a href="#fooldal" draggable="false">Főoldal</a>
                 </li>
                 <li>
@@ -56,14 +56,16 @@
                 <span><img draggable="false" src="assets/img/divider.png"></span>
                 <p>Egy régi ismerős, megújult külsővel...</p>
             </div>
-            <a href="#rolunk"><div class="arrow"></div></a>
+            <a href="#"><div class="arrow" id="jump-button"></div></a>
         </div>
     </header>
 
     <main>
         <div class="container" id="rolunk">
-            <div id="bemutatkozas">
-
+            <div class="szovegContainer">
+                <div id="bemutatkozas">
+                    <h1>Rólunk</h1>
+                </div>
             </div>
         </div>
     </main>
