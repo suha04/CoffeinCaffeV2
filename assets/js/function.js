@@ -1,10 +1,8 @@
+//Hamburger gomb működése
+
 const hamburger = document.querySelector('#hamburger');
 const navDivs = document.querySelectorAll('.navDiv');
 const nav = document.querySelector('nav');
-
-const currentScrollPos = window.pageYOffset;
-
-
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -14,21 +12,61 @@ hamburger.addEventListener('click', () => {
 
 
 
+//Navbar eltűnik görgetésre
 
-
+const currentScrollPos = window.pageYOffset;
 window.onscroll = function() {
     let prevScrollpos = window.pageYOffset;
 
   if (prevScrollpos == currentScrollPos) {
-    // Show the navigation bar
+// Látszódó navbar
     nav.classList.remove("hidden");
   } 
   else {
-    // Hide the navigation bar
+// Rejtett navbar
     hamburger.classList.remove('active');
     navDivs.forEach(navDiv => navDiv.classList.remove('active'));
     nav.classList.remove('active');
-  }
-  
+  }  
   prevScrollpos = currentScrollPos;
 }
+
+
+
+//carousel
+
+const carousel = document.querySelector('.carousel');
+const slides = carousel.querySelector('.slides');
+let slideWidth = window.innerWidth;
+let currentSlide = 0;
+
+function goToSlide(slide) {
+  slides.style.transform = `translateX(-${slide * slideWidth}px)`;
+  currentSlide = slide;
+  setActiveClass();
+}
+
+function setActiveClass() {
+  const active = carousel.querySelector('.slide.active');
+  if (active) {
+    active.classList.remove('active');
+  }
+  carousel.querySelectorAll('.slide')[currentSlide].classList.add('active');
+}
+
+function handlePrevClick() {
+  if (currentSlide > 0) {
+    goToSlide(currentSlide - 1);
+  }
+}
+
+function handleNextClick() {
+  if (currentSlide < slides.children.length - 1) {
+    goToSlide(currentSlide + 1);
+  }
+}
+
+carousel.querySelector('.prev').addEventListener('click', handlePrevClick);
+carousel.querySelector('.next').addEventListener('click', handleNextClick);
+
+goToSlide(0);

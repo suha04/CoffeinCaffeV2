@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Coffein Caffe | Kávézó és Szendvicsbár</title>
 </head>
+
 <body>
     <nav class="fixed-nav">
         <div class="navDiv">
@@ -22,7 +24,7 @@
             <span></span>
             <span></span>
         </div>
-    
+
         <div class="navDiv">
             <ul id="navList" draggable="false">
                 <li class="navActive">
@@ -39,7 +41,7 @@
                 </li>
                 <li>
                     <a href="#elerhetoseg" draggable="false">Elérhetőségünk</a>
-                </li>  
+                </li>
             </ul>
         </div>
         <div class="navDiv">
@@ -48,36 +50,62 @@
                 <a id="instagram" href="#" draggable="false"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-    </nav>    
+    </nav>
     <header>
-        <div id="fooldal">
+        <div id="fooldal" class="container">
             <div id="udvozles">
                 <h1>Coffein Caffe Kávézó</h1>
                 <span><img draggable="false" src="assets/img/divider.png"></span>
                 <p>Egy régi ismerős, megújult külsővel...</p>
             </div>
-            <a href="#"><div class="arrow" id="jump-button"></div></a>
+            <div class="arrow" id="jump-button"></div>
         </div>
     </header>
 
     <main>
-        <section class="container flex" id="rolunk">
-                <div class="szovegContainer">
-                    <div id="bemutatkozas">
-                        <h1>Rólunk</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat dolor et tortor ultrices, eget tempus neque condimentum. Integer mi nibh, faucibus quis sem at, vulputate pharetra neque. Morbi pulvinar dapibus arcu quis laoreet. Maecenas tempor metus vitae diam pellentesque, nec fermentum nisi dictum. Donec eget dui dapibus, finibus leo sit amet, tincidunt ex. Morbi id quam a mauris euismod pharetra. Nullam dignissim aliquam facilisis. Aliquam bibendum nisi enim, sed viverra tortor posuere id. Suspendisse convallis ligula sed quam tristique pretium. Ut et vulputate felis, quis facilisis massa. Mauris non ex quis quam suscipit elementum convallis a sapien. Nam consectetur massa lacus, at iaculis eros tincidunt at. Ut faucibus congue diam, quis ullamcorper nunc tincidunt eget. 
-                        </p>
-                    <div>
+        <section class="carousel">
+            <div class="slides">
+                <div class="slide active">
+                    <section class="container" id="rolunk">
+                        <div id="bemutatkozas">
+                            <h1>Rólunk</h1>
+                            <p>
+                                lol
+                            </p>
+                        </div>
+                    </section>
                 </div>
+                <div class="slide">
+                    <section class="container" id="biliard">
+                        <div id="bemutatkozas">
+                            <h1>Biliárd termünk</h1>
+                            <p>
+                                lol
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="slide">
+                    <section class="container" id="darts">
+                        <div id="bemutatkozas">
+                            <h1>Darts termünk</h1>
+                            <p>
+                                lol
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <a class="nyil prev">&#10094;</a>
+            <a class="nyil next">&#10095;</a>
         </section>
-        
     </main>
     <footer>
 
     </footer>
 
-<script src="assets/js/function.js"></script>
+    <script src="assets/js/function.js"></script>
 
 </body>
+
 </html>

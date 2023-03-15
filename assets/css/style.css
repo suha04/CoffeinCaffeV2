@@ -16,7 +16,7 @@ html
 {
     margin: 0;
     padding: 0;
-   
+    box-sizing: border-box;
 }
 
 body
@@ -153,34 +153,65 @@ border-bottom: 1px #fff solid;
 animation: arrow 2s infinite;
 }
 
+main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--fontcolor);
+    padding: 1rem;
+}
+
 .container
 {
-    margin: 1rem;
+    background-color: var(--bgcolor);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.flex
-{
-    display: flex;
-}
+
+
 
 #fooldal
 {
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-image:
     url('../img/fooldal.jpg');
 }
 
 #rolunk
 {
-    background-image: url(../img/rolunk2.jpeg);
+    
+    background: url('../img/rolunk.jpeg'),
+    linear-gradient(var(--coffered), black 80%);
     background-position: center;
+    background-blend-mode:luminosity;
+    background-size: cover;
+}
+
+#biliard
+{
+    background: url('../img/biliard.jpeg'),
+    linear-gradient(var(--coffered), black 80%);
+    background-position: center;
+    background-blend-mode:luminosity;
+    background-size: cover;
+}
+
+#darts
+{
+    background: url('../img/darts.jpeg'),
+    linear-gradient(var(--coffered), black 80%);
+    background-position: center;
+    background-blend-mode:luminosity;
+    background-size: cover;
 }
 
 #udvozles
@@ -215,40 +246,88 @@ animation: arrow 2s infinite;
     font-size: clamp(1rem, 5vw, 2rem);
 }
 
-
-.szovegContainer
+#bemutatkozas 
 {
-    width: 60rem;
-    
-}
-
-#bemutatkozas
-{
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-    min-height: 40vh;
-    height: max-content;
-    color: var(--fontcolor);
-    
-}
-
-#bemutatkozas h1
-{
-    margin-top: 8rem;
-    display: block;
+    width: 80%;
     text-align: center;
-    background-color: var(--coffered);
-    font-family: 'RULES';
-    font-size: clamp(3rem, 9vw, 5rem);
-}
-
-#bemutatkozas p
-{
-    padding: clamp(1rem, 5vw, 2rem);
-    font-family: 'Alegreya';
-    font-size: clamp(1rem, 5vw, 2rem);
+    padding: 5px;
+    color: white;
+    text-shadow: 10px 10px 10px black;
     
 }
+  
+#bemutatkozas h1 
+{
+    font-family: 'RULES';
+    font-size: clamp(4rem, 9vw, 5rem);
+   
+}
+  
+#bemutatkozas p 
+{
+    padding-top: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: 'Alegreya';
+}
+
+
+
+
+.carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.nyil {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.nyil:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -366,16 +445,8 @@ animation: arrow 2s infinite;
         position: absolute;
         transition: 200ms ease-out;
     }
-
-    .szovegContainer
-    {
-        width: 100%;
-    }
-
-    #bemutatkozas h1
-    {
-        padding-top: 1rem;
-    }
 }
+
+
 
 
