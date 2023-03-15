@@ -57,6 +57,8 @@ function setActiveClass() {
 function handlePrevClick() {
   if (currentSlide > 0) {
     goToSlide(currentSlide - 1);
+  } else {
+    goToSlide(slides.children.length - 1);
   }
 }
 
@@ -64,9 +66,14 @@ function handleNextClick() {
   if (currentSlide < slides.children.length - 1) {
     goToSlide(currentSlide + 1);
   }
+  
+  else
+  {
+    goToSlide(0);
+  }
 }
 
 carousel.querySelector('.prev').addEventListener('click', handlePrevClick);
 carousel.querySelector('.next').addEventListener('click', handleNextClick);
 
-goToSlide(0);
+

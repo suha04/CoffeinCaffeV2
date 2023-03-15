@@ -10,6 +10,7 @@
 html
 {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 *
@@ -194,11 +195,12 @@ main
     background-position: center;
     background-blend-mode:luminosity;
     background-size: cover;
+    
 }
 
 #biliard
 {
-    background: url('../img/biliard.jpeg'),
+    background: url('../img/biliard2.jpeg'),
     linear-gradient(var(--coffered), black 80%);
     background-position: center;
     background-blend-mode:luminosity;
@@ -301,10 +303,10 @@ main
     color: var(--fontcolor);
 }
 .prev {
-  left: 20px;
+  left: 5rem;
 }
 .next {
-  right: 20px;
+  right: 5rem;
 }
 
 
@@ -440,6 +442,11 @@ main
         scale: 0;
         position: absolute;
         transition: 200ms ease-out;
+    }
+
+    .nyil 
+    {
+        top: 80%;
     }
 }
 
