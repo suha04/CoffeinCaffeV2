@@ -200,7 +200,7 @@ main
 
 #biliard
 {
-    background: url('../img/biliard2.jpeg'),
+    background: url('../img/biliard.jpeg'),
     linear-gradient(var(--coffered), black 80%);
     background-position: center;
     background-blend-mode:luminosity;
