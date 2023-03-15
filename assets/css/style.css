@@ -35,6 +35,7 @@ nav
     z-index: 99999;
     justify-content: space-evenly;
     box-shadow: 0px 1px 30px 5px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navDiv
@@ -120,7 +121,7 @@ nav
 
 .arrow,
 .arrow:before {
-position: fixed;
+position: absolute;
 bottom: 10%;
 left: 50%;
 z-index: 2;
@@ -154,7 +155,7 @@ animation: arrow 2s infinite;
 
 .container
 {
-    margin: 2rem;
+    margin: 1rem;
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,7 +224,6 @@ animation: arrow 2s infinite;
 
 #bemutatkozas
 {
-    margin: clamp(0rem, 0vw, 2rem);
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     min-height: 40vh;
@@ -266,6 +266,11 @@ animation: arrow 2s infinite;
         
     }
 
+    nav.hidden 
+    {
+        transform: translateY(-100%);
+    }
+
     #navList
     {
         flex-direction: column;
@@ -283,7 +288,6 @@ animation: arrow 2s infinite;
     .navDiv.active:nth-child(4)
     {
         display: block;
-        transition: ease-in;
         padding: 1rem 0 1rem 0;
         animation: scaleUp 500ms;
     }
@@ -370,7 +374,7 @@ animation: arrow 2s infinite;
 
     #bemutatkozas h1
     {
-        
+        padding-top: 1rem;
     }
 }
 
