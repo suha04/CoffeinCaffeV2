@@ -37,11 +37,11 @@ window.onscroll = function() {
 
 const carousel = document.querySelector('.carousel');
 const slides = carousel.querySelector('.slides');
-let slideWidth = window.innerWidth;
+let slideWidth = 100;
 let currentSlide = 0;
 
 function goToSlide(slide) {
-  slides.style.transform = `translateX(-${slide * slideWidth}px)`;
+  slides.style.transform = `translateX(-${slide * slideWidth}%)`;
   currentSlide = slide;
   setActiveClass();
 }
