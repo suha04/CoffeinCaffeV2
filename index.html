@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!-- NAVIGÁCIÓ -->
     <nav class="fixed-nav">
         <div class="navDiv">
             <img id="navImg" src="assets/img/title.png" draggable="false" alt="Coffein Caffe">
@@ -40,19 +41,25 @@
                     <a href="#rendezveny" draggable="false">Rendezvények</a>
                 </li>
                 <li>
+                    <a href="#galeria" draggable="false">Galéria</a>
+                </li>
+                <li>
                     <a href="#elerhetoseg" draggable="false">Elérhetőségünk</a>
                 </li>
             </ul>
         </div>
         <div class="navDiv">
             <div id="sideNav">
-                <a id="facebook" href="#" draggable="false"><i class="fa-brands fa-facebook"></i></a>
-                <a id="instagram" href="#" draggable="false"><i class="fa-brands fa-instagram"></i></a>
+                <a id="facebook" href="https://www.facebook.com/CoffeinCafe" draggable="false"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a id="instagram" href="https://www.instagram.com/coffeincaffe/" draggable="false"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </nav>
     <header>
-        <div id="fooldal" class="container">
+        <!-- FEJLÉC -->
+        <div id="fooldal" class="container flexCenter">
             <div id="udvozles">
                 <h1>Coffein Caffe Kávézó</h1>
                 <span><img draggable="false" src="assets/img/divider.png"></span>
@@ -63,34 +70,53 @@
     </header>
 
     <main>
+        <!-- "RÓLUNK" - CAROUSEL -->
         <div class="carousel">
             <div class="slides">
                 <div class="slide active">
-                    <section class="container" id="rolunk">
+                    <section class="container flexCenter" id="rolunk">
                         <div id="bemutatkozas">
                             <h1>Rólunk</h1>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta at dui sed molestie. Nam venenatis ligula dolor, interdum pharetra quam rhoncus ac. Integer in leo cursus nibh feugiat consectetur. Integer id augue leo. Nullam enim mauris, interdum id egestas vel, imperdiet ac odio.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta at dui sed
+                                molestie. Nam venenatis ligula dolor, interdum pharetra quam rhoncus ac. Integer in leo
+                                cursus nibh feugiat consectetur. Integer id augue leo. Nullam enim mauris, interdum id
+                                egestas vel, imperdiet ac odio.
                             </p>
                         </div>
                     </section>
                 </div>
                 <div class="slide">
-                    <section class="container" id="biliard">
+                    <section class="container flexCenter" id="biliard">
                         <div id="bemutatkozas">
                             <h1>Biliárd termünk</h1>
                             <p>
-                                Próbáld ki Kávézónk biliárd termét, ahol 3 biliárd asztalon és 1 csocsó asztalon játszhatsz barátaiddal, családtagjaiddal. Élvezzétek a játékot saját zenéitekre hangolódva, hiszen nálunk ti választhatjátok ki a zenei aláfestést. Jó szórakozást kívánunk!
+                                Próbáld ki Kávézónk biliárd termét, ahol 3 biliárd asztalon és 1 csocsó asztalon
+                                játszhatsz barátaiddal, családtagjaiddal. Élvezzétek a játékot saját zenéitekre
+                                hangolódva, hiszen nálunk ti választhatjátok ki a zenei aláfestést. Jó szórakozást
+                                kívánunk!
                             </p>
                         </div>
                     </section>
                 </div>
                 <div class="slide">
-                    <section class="container" id="darts">
+                    <section class="container flexCenter" id="darts">
                         <div id="bemutatkozas">
                             <h1>Darts termünk</h1>
                             <p>
-                                Kávézónk továbbá rendelkezik egy darts részleggel is. Vendégeink 2 Euro Darts gépünket vehetik használatba. Gyere el hozzánk és fedezd fel a Darts világát!
+                                Kávézónk továbbá rendelkezik egy darts részleggel is. Vendégeink 2 Euro Darts gépünket
+                                vehetik használatba. Gyere el hozzánk és fedezd fel a Darts világát!
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="slide">
+                    <section class="container flexCenter" id="terasz">
+                        <div id="bemutatkozas">
+                            <h1>Teraszunk</h1>
+                            <p>
+                                Hangulatos kávézónk teraszán beszélgetve, kávézgatva, sörözgetve tölthetitek el
+                                időtöket, vagy akár az itt található csocsóasztalon folytathattok baráti mérkőzéseket.
                             </p>
                         </div>
                     </section>
@@ -98,7 +124,40 @@
             </div>
             <a class="nyil prev"><i class="fa-solid fa-circle-arrow-left"></i></a>
             <a class="nyil next"><i class="fa-solid fa-circle-arrow-right"></i></a>
+            <div class="slideCounter"></div>
         </div>
+        <!-- SZENDVICSEINK -->
+        <section class="container flexCenter" id="szendvicsek">
+            <h1>Szendvicseink</h1>
+            <p>
+                Ha jó ár-érték arányú, kiváló minőségű és változatos szendvicsekkel szeretné meglepni vendégeit, akkor jó helyen jár!
+                <br>
+                16 féle feltétünkkel kínáljuk szendvicseinket, hogy mindenki megtalálja a kedvencét. Legyen az sonkás,
+                lazacos, camambert sajtos vagy akár vegán, mi minden ízlést kielégítünk.
+                <br>
+                A piaci legkedvezőbb áron kínáljuk szendvicseinket, így könnyen kiszámítható költségvetést biztosítunk rendezvényére.
+                <br>
+                Fontos tudni, hogy minimum 50 darab rendelés esetén állunk rendelkezésére, illetve fajtánként 10
+                darabonként rendelhetőek.
+                <br>
+                Party szendvicseink mindenféle összejövetelre tökéletes választások! Nézze meg kínálatunkat, és rendeljen most!
+            </p>
+            <a id="szendvicsGomb" href="">Megnézem!</a>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
     <footer>
 

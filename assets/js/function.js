@@ -37,6 +37,7 @@ window.onscroll = function() {
 
 const carousel = document.querySelector('.carousel');
 const slides = carousel.querySelector('.slides');
+const slideCounter = carousel.querySelector('.slideCounter');
 let slideWidth = 100;
 let currentSlide = 0;
 
@@ -44,6 +45,7 @@ function goToSlide(slide) {
   slides.style.transform = `translateX(-${slide * slideWidth}%)`;
   currentSlide = slide;
   setActiveClass();
+  updateSlideCounter();
 }
 
 function setActiveClass() {
@@ -65,15 +67,17 @@ function handlePrevClick() {
 function handleNextClick() {
   if (currentSlide < slides.children.length - 1) {
     goToSlide(currentSlide + 1);
-  }
-  
-  else
-  {
+  } else {
     goToSlide(0);
   }
+}
+
+function updateSlideCounter() {
+  const totalSlides = slides.children.length;
+  slideCounter.innerHTML = `${currentSlide + 1}/${totalSlides}`;
 }
 
 carousel.querySelector('.prev').addEventListener('click', handlePrevClick);
 carousel.querySelector('.next').addEventListener('click', handleNextClick);
 
-
+updateSlideCounter();

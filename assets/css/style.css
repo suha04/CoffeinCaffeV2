@@ -50,7 +50,7 @@ nav
 
 #navImg
 {
-    width: 12rem;
+    width: clamp(10rem, 1vw, 12rem);
     aspect-ratio: 970, 261;
     font-size: 1.9rem;
     text-align: center;
@@ -65,12 +65,11 @@ nav
     list-style: none;
     gap: clamp(0.5rem, 1vw, 1rem);
     flex-direction: row;
-    
 }
 
 #navList a
 {
-    font-size: clamp(1rem);
+    font-size: clamp(1rem, 1vw, 1rem);
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
@@ -154,6 +153,54 @@ border-bottom: 1px #fff solid;
 animation: arrow 2s infinite;
 }
 
+.carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .nyil {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    cursor: pointer;
+  }
+  .nyil:active, .nyil:hover {
+      color: var(--fontcolor);
+  }
+  .prev {
+    left: 5rem;
+  }
+  .next {
+    right: 5rem;
+  }
+  
+  .slideCounter {
+      position: absolute;
+      bottom: 18.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--fontcolor);
+      font-family: 'Alegreya';
+      font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+    
+    .slideCounter span {
+      font-weight: bold;
+    }
+
 main
 {
     display: flex;
@@ -165,19 +212,22 @@ main
 
 .container
 {
+    display: flex;
+    flex-direction: column;
     background-color: var(--bgcolor);
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+.flexCenter
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -189,7 +239,6 @@ main
 
 #rolunk
 {
-    
     background: url('../img/rolunk.jpeg'),
     linear-gradient(var(--coffered), black 80%);
     background-position: center;
@@ -197,6 +246,7 @@ main
     background-size: cover;
     
 }
+
 
 #biliard
 {
@@ -210,6 +260,15 @@ main
 #darts
 {
     background: url('../img/darts.jpeg'),
+    linear-gradient(var(--coffered), black 80%);
+    background-position: center;
+    background-blend-mode:luminosity;
+    background-size: cover;
+}
+
+#terasz
+{
+    background: url('../img/terasz.jpeg'),
     linear-gradient(var(--coffered), black 80%);
     background-position: center;
     background-blend-mode:luminosity;
@@ -231,8 +290,14 @@ main
     
 }
 
+h1
+{
+    font-weight: normal;
+}
+
 #udvozles h1
 {
+
     font-family: 'RULES';
     font-size: clamp(2rem, 9vw, 5rem);
 }
@@ -272,43 +337,51 @@ main
     font-family: 'Alegreya';
 }
 
-
-
-
-.carousel {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-}
-.nyil {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  cursor: pointer;
-}
-.nyil:active {
+#szendvicsek
+{
+    background: url('../img/szendvicsek3.jpg'),
+    linear-gradient(black, white);
+    background-position: center;
+    background-blend-mode:multiply;
+    background-size: cover;
+    text-align: center;
     color: var(--fontcolor);
-}
-.prev {
-  left: 5rem;
-}
-.next {
-  right: 5rem;
+    text-shadow: 10px 10px 10px black;
 }
 
+#szendvicsek h1
+{
+    font-family: 'RULES';
+    font-size: clamp(2rem, 9vw, 5rem);
+}
+
+#szendvicsek p
+{
+    padding: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: 'Alegreya';
+    
+}
+
+#szendvicsGomb
+{
+    bottom: 0;
+    position: relative;
+    top: 20px;
+    background-color: var(--coffedarkred);
+    padding: 1rem;
+    font-size: clamp(1rem, 5vw, 2rem);
+    text-shadow: none;
+    color: var(--fontcolor);
+    text-decoration: none;
+    font-family: 'BebasNeue';
+    box-shadow: 5px 5px 20px black;
+}
+
+#szendvicsGomb:hover, #szendvicsGomb:active
+{
+    transform: scale(1.2);
+}
 
 
 
@@ -318,19 +391,7 @@ main
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 800px) {
+@media (max-width: 1110px) {
     nav
     {
         flex-direction: column;   
@@ -373,7 +434,7 @@ main
         position: absolute;
         width: 35px;
         right: 1.5rem;
-        top: 1.5rem;
+        top: 1.2rem;
         aspect-ratio: 1/1;
         display: flex;
         flex-direction: column;
@@ -444,12 +505,12 @@ main
         transition: 200ms ease-out;
     }
 
+   
+
     .nyil 
     {
         top: 80%;
     }
 }
-
-
 
 
