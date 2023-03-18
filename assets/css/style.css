@@ -4,13 +4,13 @@
     --fontcolor: white;
     --coffered: rgb(155, 0, 0);
     --coffedarkred: rgb(130, 0, 0);
+    --coffelightred: rgb(190, 0, 0);
     --hovercolor: white;
 }
 
 html
 {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
 
 *
@@ -73,15 +73,22 @@ nav
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
+    padding: .2rem;
+    border-radius: .5rem;
 }
 
-#navList a:hover
+#navList a:not(a.active):hover
 {
-    color: var(--hovercolor);
+    color: var(--fontcolor);
     border-block: 5px solid var(--hovercolor);
-    border-radius: 10%;
     transition: 200ms ease-in;
     
+}
+
+#navList a.active
+{
+    background-color: var(--coffelightred);
+    padding: .5rem;
 }
 
 
