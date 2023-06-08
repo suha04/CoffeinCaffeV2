@@ -4,7 +4,7 @@
     --fontcolor: white;
     --coffered: rgb(155, 0, 0);
     --coffedarkred: rgb(130, 0, 0);
-    --coffelightred: rgb(190, 0, 0);
+    --coffelightred: rgb(200, 0, 0);
     --hovercolor: white;
 }
 
@@ -73,8 +73,8 @@ nav
     text-decoration: none;
     font-family: 'Amontesa';
     color: var(--fontcolor);
-    padding: .2rem;
     border-radius: .5rem;
+    padding: .2rem;
 }
 
 #navList a:not(a.active):hover
@@ -88,7 +88,7 @@ nav
 #navList a.active
 {
     background-color: var(--coffelightred);
-    padding: .5rem;
+    
 }
 
 
@@ -389,9 +389,6 @@ h1
 {
     transform: scale(1.2);
 }
-
-
-
 
 
 
